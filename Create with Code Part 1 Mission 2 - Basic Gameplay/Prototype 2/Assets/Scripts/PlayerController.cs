@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     private float xRange = 25.0f;
     private float zRange = 20.0f;
 
+    public Transform projectileSpawnPoint;
+
+
 
     public GameObject projectilePrefab;
 
@@ -54,7 +57,7 @@ public class PlayerController : MonoBehaviour
         //Fire projectile from player location.
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
 
 
 

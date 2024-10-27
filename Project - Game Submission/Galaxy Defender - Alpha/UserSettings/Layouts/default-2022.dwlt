@@ -95,8 +95,8 @@ MonoBehaviour:
     y: 486.4
     width: 1423.2
     height: 424.00003
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 86
+  controlID: 93
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 150}
   m_MaxSize: {x: 24288, y: 24288}
   vertical: 0
-  controlID: 151
+  controlID: 17
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -199,8 +199,8 @@ MonoBehaviour:
     y: 0
     width: 230.4
     height: 324.8
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -225,8 +225,8 @@ MonoBehaviour:
     y: 910.4
     width: 1653.6
     height: 108.400024
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 150}
   m_MaxSize: {x: 16192, y: 24288}
   vertical: 1
-  controlID: 84
+  controlID: 18
   draggingID: 0
 --- !u!114 &14
 MonoBehaviour:
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 0
-  controlID: 85
+  controlID: 19
   draggingID: 0
 --- !u!114 &15
 MonoBehaviour:
@@ -374,8 +374,8 @@ MonoBehaviour:
     y: 0
     width: 1423.2
     height: 486.4
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -497,7 +497,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -514,7 +514,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e2590000
     m_LastClickedID: 23010
-    m_ExpandedIDs: 00000000de590000e0590000e2590000
+    m_ExpandedIDs: 000000004a5b00004c5b00004e5b0000505b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -542,21 +542,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000de590000e0590000e259000084950000
+    m_ExpandedIDs: ffffffff000000004a5b00004c5b00004e5b0000505b0000b0620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: ProjectileFireForward
+      m_OriginalName: ProjectileFireForward
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 27750
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 2}
     m_SearchString: 
@@ -681,24 +681,24 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 96}
-      m_SelectedIDs: 7282feff
-      m_LastClickedID: -97678
-      m_ExpandedIDs: d607ffff66dfffff4eefffff22f0ffff30fbffff
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: cc590000
+      m_LastClickedID: 22988
+      m_ExpandedIDs: c4a2ffff90dfffff30fbffffcc590000825a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: ProjectileSpawnLocation
+        m_OriginalName: ProjectileSpawnLocation
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -15284
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -1038,9 +1038,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.858169, y: 17.307726, z: -4.0944433}
+    m_Target: {x: 7.148817, y: 10.586774, z: 409.2276}
     speed: 2
-    m_Value: {x: -1.858169, y: 17.307726, z: -4.0944433}
+    m_Value: {x: 7.148817, y: 10.586774, z: 409.2276}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1086,13 +1086,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.014386111, y: -0.043182414, z: 0.0006190538, w: 0.9989754}
+    m_Target: {x: -0.023430565, y: -0.6900243, z: -0.022370985, w: 0.72309643}
     speed: 2
-    m_Value: {x: 0.01438594, y: -0.0431819, z: 0.0006190464, w: 0.9989635}
+    m_Value: {x: -0.023429962, y: -0.69000655, z: -0.02237041, w: 0.72307783}
   m_Size:
-    m_Target: 11.301602
+    m_Target: 12.124355
     speed: 2
-    m_Value: 11.301602
+    m_Value: 12.124355
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1181,8 +1181,8 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 1
-    m_VSlider: 1
+    m_HSlider: 0
+    m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -1195,18 +1195,18 @@ MonoBehaviour:
       y: 21
       width: 1421.2
       height: 382.00003
-    m_Scale: {x: 1.2863412, y: 1.2863412}
-    m_Translation: {x: 697.8107, y: 185.44708}
+    m_Scale: {x: 1.25, y: 1.25}
+    m_Translation: {x: 710.6, y: 191.00003}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -542.4772
-      y: -144.16632
-      width: 1104.839
-      height: 296.96634
+      x: -568.48
+      y: -152.80002
+      width: 1136.96
+      height: 305.60004
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1776.5, y: 503.75003}

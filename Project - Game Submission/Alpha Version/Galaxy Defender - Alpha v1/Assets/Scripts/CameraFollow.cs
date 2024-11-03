@@ -53,7 +53,16 @@ public class CameraFollow : MonoBehaviour
         transform.localPosition = Vector3.SmoothDamp(localPos, new Vector3(targetLocalPos.x + offset.x, targetLocalPos.y + offset.y, localPos.z), ref velocity, smoothTime);
         //Debug.Log("FollowTargetWorking"); //Test if code is working.
     }
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Time.timeScale = 0;
+            Debug.Log("Player Crashes, Camera Stopped");
+        }
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;

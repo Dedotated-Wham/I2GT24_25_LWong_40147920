@@ -2,15 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEditor.Experimental.GraphView;
+//using System.Diagnostics;
 
 public class PlayerController : MonoBehaviour
 {
     private Transform playerModel;
 
+    [Header("Parameters")]
     public float xySpeed = 10;
     public float lookSpeed = 50;
     public float forwardSpeed = 10;
+    public float rollSpeed = 10;
 
+    [Space]
+
+    [Header("Projectile")]
+    public GameObject projectilePrefab;
+    public Transform projectileSpawnPoint;
+
+    [Space]
+
+    [Header("Camera")]
     public Transform cameraParent;
     public Transform aimTarget;
     //public CinemachineDollyCart dolly;
@@ -33,63 +46,97 @@ public class PlayerController : MonoBehaviour
 
         LocalMove(h, v, xySpeed);
         RotationLook(h, v, lookSpeed);
-        //HorizontalLean(playerModel, h, 5, 1.0f);
+        HorizontalLean(playerModel, h, 20, 0.1f);
         ClampPosition();
 
         //Move plane forward.
         transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed);
 
-        //Fire projectile from player location.
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
+        /*
+        //Roll plane.
+        //Press 'Q' or 'E' to rotate along forward axis.
 
+        if (Input.GetKey(KeyCode.Q))
+        {
+            transform.Rotate(Vector3.forward, Time.deltaTime * rollSpeed);
+            Debug.Log("Pressing Q");
 
         }
-          */
-    }
-    // Move player around field of view camera.
-    void LocalMove(float x, float y, float speed)
-    {
-        transform.localPosition += new Vector3(x, y, 0) * speed * Time.deltaTime;
-    }
 
-  
-    //Prevents the player from moving off screen.       
-    void ClampPosition()
-    {
-        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
-        pos.x = Mathf.Clamp01(pos.x);
-        pos.y = Mathf.Clamp01(pos.y);
-        transform.position = Camera.main.ViewportToWorldPoint(pos);
-    }
 
-    void RotationLook(float h, float v, float speed)
-    {
-        aimTarget.parent.position = Vector3.zero;
-        aimTarget.localPosition = new Vector3(h, v, 1); //Choose an aim area in front of player object.
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimTarget.position), Mathf.Deg2Rad * speed);
-    }
-    /*      
-    void HorizontalLean(Transform target, float axis, float leanLimit, float lerpTime)
-    {
-        Vector3 targetEulerAngles = target.localEulerAngles;
-        target.localEulerAngles = new Vector3(targetEulerAngles.x, targetEulerAngles.y, Mathf.LerpAngle(targetEulerAngles.z, -axis * leanLimit, lerpTime));
-        //Debug.Log("HorizontalLeanWorking");
-    }
-      */
-    /*
-    void SetSpeed(float x)
-    {
-        dolly.m_Speed = x;
-    }
-    */
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(aimTarget.position, .5f);
-        Gizmos.DrawSphere(aimTarget.position, .15f);
+        if (Input.GetKey(KeyCode.E))
+        {
+            transform.Rotate(Vector3.forward, Time.deltaTime * -rollSpeed);
+            Debug.Log("Pressing E");
+        }
+        */
 
+        //Fire projectile from player location and direction player is facing.
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.transform.rotation);
+
+        }
+        // Move player around field of view camera.
+        void LocalMove(float x, float y, float speed)
+        {
+            transform.localPosition += new Vector3(x, y, 0) * speed * Time.deltaTime;
+        }
+
+
+        //Prevents the player from moving off screen.       
+        void ClampPosition()
+        {
+            Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+            pos.x = Mathf.Clamp01(pos.x);
+            pos.y = Mathf.Clamp01(pos.y);
+            transform.position = Camera.main.ViewportToWorldPoint(pos);
+        }
+
+
+        //To improve the rotation of the plane as the player moves around.
+        void RotationLook(float h, float v, float speed)
+        {
+            aimTarget.parent.position = Vector3.zero;
+            aimTarget.localPosition = new Vector3(h, v, 1); //Choose an aim area in front of player object.
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimTarget.position), Mathf.Deg2Rad * speed);
+        }    
+     
+       void HorizontalLean(Transform target, float axis, float leanLimit, float lerpTime)
+       {
+            Vector3 targetEulerAngles = target.localEulerAngles;
+            target.localEulerAngles = new Vector3(targetEulerAngles.x, targetEulerAngles.y, Mathf.LerpAngle(targetEulerAngles.z, -axis * leanLimit, lerpTime));
+            //Debug.Log("HorizontalLeanWorking");
+       }
+
+
+
+        /*
+        void SetSpeed(float x)
+        {
+            dolly.m_Speed = x;
+        }
+        */
+        /*
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(aimTarget.position, .5f);
+            Gizmos.DrawSphere(aimTarget.position, .15f);
+
+        }
+         */
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        //If Player Projectile comes in contact with environment or enemy, destroy player.
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+            Debug.Log("Player Crashes");
+        }
+    }
+     
 
 }

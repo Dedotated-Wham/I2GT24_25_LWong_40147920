@@ -1,7 +1,7 @@
-using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 
 public class CameraFollow : MonoBehaviour
 {
@@ -19,47 +19,39 @@ public class CameraFollow : MonoBehaviour
 
     private Vector3 velocity = Vector3.zero;
 
-    public Transform projectileSpawnPoint;
-
-    public GameObject projectilePrefab;
-
-
-
 
     // Update is called once per frame
     void Update()
     {
-        
+          
         if (!Application.isPlaying)
         {
             transform.localPosition = offset;
+            Debug.Log("Application Is Working");
         }
-          
+           
         FollowTarget(target);
 
-        //Fire projectile from player location.
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
+     
 
+    }
 
-        }
-
-        void LateUpdate()
+    //Limits the X and Y position of the camera viewpoint.
+    void LateUpdate()
     {
         Vector3 localPos = transform.localPosition;
 
         transform.localPosition = new Vector3(Mathf.Clamp(localPos.x, -limits.x, limits.x), Mathf.Clamp(localPos.y, -limits.y, limits.y), localPos.z);
+        //Debug.Log("LateUpdateWorking"); //Test if code is working.
     }
-    
-    
 
-    
     public void FollowTarget(Transform t)
     {
+
         Vector3 localPos = transform.localPosition;
         Vector3 targetLocalPos = t.transform.localPosition;
         transform.localPosition = Vector3.SmoothDamp(localPos, new Vector3(targetLocalPos.x + offset.x, targetLocalPos.y + offset.y, localPos.z), ref velocity, smoothTime);
+        //Debug.Log("FollowTargetWorking"); //Test if code is working.
     }
     
     private void OnDrawGizmos()

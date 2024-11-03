@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class MoveForward : MonoBehaviour
 {
-    public float speed = 40.0f;
+    
+    public float speed = 5;
+    public Vector3 offset = Vector3.zero;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
-
-
+        transform.position = transform.position + offset;
     }
 }
-

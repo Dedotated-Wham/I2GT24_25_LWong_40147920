@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-using UnityEditor.Experimental.GraphView;
+
 //using System.Diagnostics;
 
 public class PlayerController : MonoBehaviour
 {
     private Transform playerModel;
+   
 
-    [Header("Parameters")]
+
+        [Header("Parameters")]
     public float xySpeed = 10;
     public float lookSpeed = 50;
     public float forwardSpeed = 10;
@@ -35,13 +37,15 @@ public class PlayerController : MonoBehaviour
         //SetSpeed(forwardSpeed);
     }
 
+
+
     // Update is called once per frame
     void Update()
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-
+        
 
 
         LocalMove(h, v, xySpeed);
@@ -128,15 +132,10 @@ public class PlayerController : MonoBehaviour
         }
          */
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        //If Player Projectile comes in contact with environment or enemy, destroy player.
-        if (other.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-            Debug.Log("Player Crashes");
-        }
-    }
-     
+
+
+
+
+
 
 }

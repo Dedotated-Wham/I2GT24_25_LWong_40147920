@@ -8,8 +8,8 @@ public class EnemyFiring : MonoBehaviour
     public GameObject projectilePrefab;
     public Transform projectileSpawnPoint;
 
-    public float speed = 30.0f;
-    public float timer = 0.f;
+    public float speed = 50.0f;
+    public float timer = 0.2f;
     public float startDelay = 1.0f;
     // Start is called before the first frame update
     void Start()

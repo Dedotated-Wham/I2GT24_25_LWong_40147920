@@ -23,19 +23,18 @@ public class DetectCollisions : MonoBehaviour
             Debug.Log("Player Destroys Destructible Environment");
         }
 
+        
         //If Player Projectile comes in contact with enemy, destroy enemy.
         if (other.gameObject.CompareTag("Enemy"))
         {
             Destroy(gameObject);
-            Debug.Log("Player Destroys Enemy");
+            //Debug.Log("Player Destroys Enemy");
         }
 
-        //If Player Projectile comes in contact with environment or enemy, destroy player.
-        //if (other.gameObject.CompareTag("Player"))
-        {
-            //Destroy(gameObject);
-            //Debug.Log("Player Crashes");
-        }
+
+        
+
+      
 
      
 

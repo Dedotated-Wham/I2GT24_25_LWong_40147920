@@ -27,5 +27,6 @@ public class ProjectileMoveForward : MonoBehaviour
         Destroy(gameObject);
         //Debug.Log("Projectile Self Destructed");
     }
+   
 }
 

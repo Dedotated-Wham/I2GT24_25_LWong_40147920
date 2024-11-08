@@ -7,7 +7,7 @@ TagManager:
   - Environment
   - Player Projectile
   - Enemy
-  - Destructible Environment
+  - Obstacle
   layers:
   - Default
   - TransparentFX

@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
         LocalMove(h, v, xySpeed);
         RotationLook(h, v, lookSpeed);
-        HorizontalLean(playerModel, h, 20, 0.1f);
+        //HorizontalLean(playerModel, h, 20, 0.1f);
         ClampPosition();
 
         //Move plane forward.
@@ -103,17 +103,18 @@ public class PlayerController : MonoBehaviour
         void RotationLook(float h, float v, float speed)
         {
             aimTarget.parent.position = Vector3.zero;
-            aimTarget.localPosition = new Vector3(h, v, 1); //Choose an aim area in front of player object.
+            aimTarget.localPosition = new Vector3(h, v, 1); //Choose an empty aim area in front of player for player object to follow.
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimTarget.position), Mathf.Deg2Rad * speed);
         }    
-     
+       
+       /*
        void HorizontalLean(Transform target, float axis, float leanLimit, float lerpTime)
        {
             Vector3 targetEulerAngles = target.localEulerAngles;
             target.localEulerAngles = new Vector3(targetEulerAngles.x, targetEulerAngles.y, Mathf.LerpAngle(targetEulerAngles.z, -axis * leanLimit, lerpTime));
             //Debug.Log("HorizontalLeanWorking");
        }
-
+         */
 
 
         /*
@@ -133,7 +134,22 @@ public class PlayerController : MonoBehaviour
          */
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            Destroy(gameObject);
+            Debug.Log("Player Crashed Into Enemy");
+            Debug.Break();
+        }
 
+        if (other.gameObject.tag == "Obstacle")
+        {
+            Destroy(gameObject);
+            Debug.Log("Player Crashed Into Obstacle");
+            Debug.Break();
+        }
+    }
 
 
 

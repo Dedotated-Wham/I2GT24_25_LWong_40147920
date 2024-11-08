@@ -8,40 +8,30 @@ public class DetectCollisions : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-        //If Player Projectile comes in contact with enviroment or enemy, destroy it.
-        if (other.gameObject.CompareTag("Player Projectile"))
+        if (other.gameObject.tag == "Enemy")
         {
-            Destroy(gameObject);
-            Debug.Log("Projectile Contact");
+            Destroy(other.gameObject);          //This will destroy the enemy object.
+            Destroy(gameObject);                //This will destroy the player projectile.
+            Debug.Log("Bullet Hit Enemy");
+        }
+    
+        if (other.gameObject.tag == "Obstacle")
+        {
+            Destroy(other.gameObject);          //This will destroy the obstacle.
+            Destroy(gameObject);                //This will destroy the player projectile.
+            Debug.Log("Bullet Hit Obstacle");
         }
 
-        //If Player Projectile comes in contact with environment, destroy environment.
-        if (other.gameObject.CompareTag("Destructible Environment"))
+        if (other.gameObject.tag == "Environment")
         {
-            Destroy(gameObject);
-            Debug.Log("Player Destroys Destructible Environment");
+            Destroy(gameObject);                //This will destroy the player projectile when it hits the environment.
+            Debug.Log("Bullet Hit Obstacle");
         }
-
-        
-        //If Player Projectile comes in contact with enemy, destroy enemy.
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            Destroy(gameObject);
-            //Debug.Log("Player Destroys Enemy");
-        }
-
-
-        
-
-      
-
-     
-
     }
 
  
 
+ 
 
 
 

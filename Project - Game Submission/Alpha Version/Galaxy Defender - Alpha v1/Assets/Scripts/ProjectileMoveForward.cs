@@ -23,7 +23,7 @@ public class ProjectileMoveForward : MonoBehaviour
   
     IEnumerator SelfDestruct()
     {
-        yield return new WaitForSeconds(5f); //Destroy object after x seconds.
+        yield return new WaitForSeconds(2f); //Destroy object after x seconds.
         Destroy(gameObject);
         //Debug.Log("Projectile Self Destructed");
     }

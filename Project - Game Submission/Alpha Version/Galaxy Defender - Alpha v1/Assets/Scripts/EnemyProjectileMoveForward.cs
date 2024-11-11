@@ -13,10 +13,6 @@ public class EnemyProjectile : MonoBehaviour
         
     }
 
-
-
-
-
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +22,7 @@ public class EnemyProjectile : MonoBehaviour
 
     IEnumerator SelfDestruct()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(5f); //Delete Object after x seconds.
         Destroy(gameObject);
         //Debug.Log("Enemy Projectile Self Destructed");
     }

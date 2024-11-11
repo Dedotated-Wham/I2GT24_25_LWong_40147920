@@ -25,7 +25,7 @@ public class DetectCollisions : MonoBehaviour
         if (other.gameObject.tag == "Environment")
         {
             Destroy(gameObject);                //This will destroy the player projectile when it hits the environment.
-            Debug.Log("Bullet Hit Obstacle");
+            Debug.Log("Bullet Hit Environment");
         }
     }
 

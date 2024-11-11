@@ -11,7 +11,8 @@ public class DetectCollisionsEnemy : MonoBehaviour
             Destroy(other.gameObject);          //Destroy Player Object on collision.
             Destroy(gameObject);                //Destroy Enemy Projectile on collision.
             Debug.Log("Enemy Hit Player");
-            Debug.Break();
+            //Debug.Break();
+            PlayerManager.isGameOver = true;
         }
     }
 }

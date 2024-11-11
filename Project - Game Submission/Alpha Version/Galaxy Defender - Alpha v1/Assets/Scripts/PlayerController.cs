@@ -8,10 +8,10 @@ using Cinemachine;
 public class PlayerController : MonoBehaviour
 {
     private Transform playerModel;
-   
 
 
-        [Header("Parameters")]
+
+    [Header("Parameters")]
     public float xySpeed = 10;
     public float lookSpeed = 50;
     public float forwardSpeed = 10;
@@ -34,10 +34,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerModel = transform.GetChild(0);
-        //SetSpeed(forwardSpeed);
+        
     }
-
-
 
     // Update is called once per frame
     void Update()
@@ -56,6 +54,7 @@ public class PlayerController : MonoBehaviour
         //Move plane forward.
         transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed);
 
+        //***Code not working below, to be tested later on.***
         /*
         //Roll plane.
         //Press 'Q' or 'E' to rotate along forward axis.
@@ -105,17 +104,18 @@ public class PlayerController : MonoBehaviour
             aimTarget.parent.position = Vector3.zero;
             aimTarget.localPosition = new Vector3(h, v, 1); //Choose an empty aim area in front of player for player object to follow.
             transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.LookRotation(aimTarget.position), Mathf.Deg2Rad * speed);
-        }    
-       
-       /*
-       void HorizontalLean(Transform target, float axis, float leanLimit, float lerpTime)
-       {
-            Vector3 targetEulerAngles = target.localEulerAngles;
-            target.localEulerAngles = new Vector3(targetEulerAngles.x, targetEulerAngles.y, Mathf.LerpAngle(targetEulerAngles.z, -axis * leanLimit, lerpTime));
-            //Debug.Log("HorizontalLeanWorking");
-       }
-         */
+        }
+        //***Code to be tested later on.***
+        /*
+        void HorizontalLean(Transform target, float axis, float leanLimit, float lerpTime)
+        {
+             Vector3 targetEulerAngles = target.localEulerAngles;
+             target.localEulerAngles = new Vector3(targetEulerAngles.x, targetEulerAngles.y, Mathf.LerpAngle(targetEulerAngles.z, -axis * leanLimit, lerpTime));
+             //Debug.Log("HorizontalLeanWorking");
+        }
+          */
 
+        //***Code not working below, to be tested later on.***
 
         /*
         void SetSpeed(float x)
@@ -136,19 +136,33 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        
         if (other.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
             Debug.Log("Player Crashed Into Enemy");
-            Debug.Break();
+            //Debug.Break();
+            PlayerManager.isGameOver = true;
+            
         }
 
         if (other.gameObject.tag == "Obstacle")
         {
             Destroy(gameObject);
             Debug.Log("Player Crashed Into Obstacle");
-            Debug.Break();
+            //Debug.Break();
+            PlayerManager.isGameOver = true;
+
         }
+        if (other.gameObject.tag == "End Level")
+        {
+            //Destroy(gameObject);
+            Debug.Log("Player Reached The End Of Level");
+            PlayerManager.isGameOver = true;
+            Debug.Break();
+
+        }
+
     }
 
 

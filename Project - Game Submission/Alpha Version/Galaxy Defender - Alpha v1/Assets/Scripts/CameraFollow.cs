@@ -54,6 +54,8 @@ public class CameraFollow : MonoBehaviour
         //Debug.Log("FollowTargetWorking"); //Test if code is working.
     }
 
+    //***Code not working below, to be tested later on.***
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -62,6 +64,7 @@ public class CameraFollow : MonoBehaviour
             Debug.Log("Player Crashes, Camera Stopped");
         }
     }
+    */
 
     private void OnDrawGizmos()
     {

@@ -8,6 +8,7 @@ TagManager:
   - Player Projectile
   - Enemy
   - Obstacle
+  - End Level
   layers:
   - Default
   - TransparentFX

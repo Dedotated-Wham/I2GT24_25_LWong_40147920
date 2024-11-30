@@ -25,5 +25,10 @@ public class Enemy : MonoBehaviour
             //Add Force (calculates vector based on player and enemy position.
             //player.transform.position to get current position of player.
             //transform.position is the position of the enemy. (This script)
+
+        if(transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
     }
 }

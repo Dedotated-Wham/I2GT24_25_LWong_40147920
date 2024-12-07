@@ -169,6 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &4152394
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -392,6 +394,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &25046867
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -510,6 +514,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &28471753
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -780,6 +786,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &34637625
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1365,6 +1373,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!1 &106934034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,6 +1618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &144765606
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1907,6 +1919,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &149814349
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2044,6 +2058,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &159499983
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2164,6 +2180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &167379936
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2282,6 +2300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &171282538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2746,6 +2766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &225151495
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3651,6 +3673,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &298862851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3769,6 +3793,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &303984260
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4865,6 +4891,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!1 &336002654
 GameObject:
   m_ObjectHideFlags: 0
@@ -5497,6 +5525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &374686242
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5615,6 +5645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &385415834
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5733,6 +5765,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &395833104
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5851,6 +5885,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &397928272
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6128,12 +6164,6 @@ MonoBehaviour:
   m_Waypoints:
   - position: {x: 0, y: 0, z: 0}
     roll: 0
-  - position: {x: 0, y: 0, z: 50}
-    roll: 0
-  - position: {x: 0, y: 0, z: 100}
-    roll: 0
-  - position: {x: 0, y: 0, z: 200}
-    roll: 0
   - position: {x: 0, y: 0, z: 1000}
     roll: 0
 --- !u!4 &424588261
@@ -6198,6 +6228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &428678858
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6500,6 +6532,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &448105330
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6620,6 +6654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &451570949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6738,6 +6774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &456930601
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6990,6 +7028,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &476456266
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7241,6 +7281,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &493430862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7542,6 +7584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &536552856
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7959,6 +8003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &552918163
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8077,6 +8123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &576475971
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8897,6 +8945,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &639925050
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9034,6 +9084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &656811249
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9204,6 +9256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &666155829
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9899,6 +9953,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &707812570
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10468,6 +10524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &742835748
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10805,6 +10863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &766022815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10923,6 +10983,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &768942473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11144,6 +11206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &780003150
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11416,6 +11480,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &818793801
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12335,6 +12401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &871263420
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12587,6 +12655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &893986550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12705,6 +12775,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &897381509
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12906,6 +12978,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &938847223
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13043,6 +13117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &947527349
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13182,6 +13258,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &949964315
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13597,6 +13675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1003378052
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13847,6 +13927,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1020698019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15013,6 +15095,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1102387327
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15317,6 +15401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1104513900
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -15871,6 +15957,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1190631546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15989,6 +16077,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1203221074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16755,6 +16845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &1264247648
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16873,6 +16965,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1266042858
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17010,6 +17104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1280105367
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -17130,6 +17226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1297417519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17650,6 +17748,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &1420754440
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18148,6 +18248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1437450385
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18553,6 +18655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1476620631
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18856,6 +18960,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1489649110
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18995,6 +19101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1490106642
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -19080,6 +19188,7 @@ GameObject:
   - component: {fileID: 1499951082}
   - component: {fileID: 1499951083}
   - component: {fileID: 1499951084}
+  - component: {fileID: 1499951085}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -19124,6 +19233,8 @@ MonoBehaviour:
   projectileSpawnPoint: {fileID: 1032487636}
   cameraParent: {fileID: 432187806}
   aimTarget: {fileID: 628119145}
+  mainWeaponSound: {fileID: 8300000, guid: 779a2065ddbe1664b83a00c7ab943eae, type: 3}
+  altWeaponSound: {fileID: 8300000, guid: 89573f7baeb8f8345946674021cf179b, type: 3}
 --- !u!65 &1499951083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19172,6 +19283,102 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!82 &1499951085
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499951080}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1507791144
 GameObject:
   m_ObjectHideFlags: 0
@@ -19219,6 +19426,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1507791147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19470,6 +19679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1530624577
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19752,6 +19963,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1551352359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19870,6 +20083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &1553294056
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20370,6 +20585,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1600535504
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20488,6 +20705,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1610652518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20681,6 +20900,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!114 &1612186135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20745,6 +20966,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &1620317108
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21728,6 +21951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &1707910817
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22565,6 +22790,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1750104032
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -22849,6 +23076,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &1790857561
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -23067,6 +23296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1807683040
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -23187,6 +23418,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1813388097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23655,6 +23888,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1844161686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23937,6 +24172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1870017468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24269,6 +24506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &1898827256
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -24406,6 +24645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1911112824
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -24811,6 +25052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1921968153
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -24931,6 +25174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1928315137
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25068,6 +25313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1928897402
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -25207,6 +25454,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &1931555829
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -25327,6 +25576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1934608408
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25476,6 +25727,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!135 &1946503637
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -25728,6 +25981,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &1982476959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26459,6 +26714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &2046539991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26577,6 +26834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!65 &2058100895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27218,6 +27477,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstacleSound: {fileID: 0}
+  enemySound: {fileID: 0}
 --- !u!136 &2130932266
 CapsuleCollider:
   m_ObjectHideFlags: 0

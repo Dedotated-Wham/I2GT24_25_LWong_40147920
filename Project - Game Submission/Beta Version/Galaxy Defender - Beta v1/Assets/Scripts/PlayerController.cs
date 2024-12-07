@@ -8,6 +8,9 @@ using Cinemachine;
 public class PlayerController : MonoBehaviour
 {
     private Transform playerModel;
+    private AudioSource playerAudio;
+
+
 
     [Header("Parameters")]
     public float xySpeed = 10;
@@ -28,10 +31,18 @@ public class PlayerController : MonoBehaviour
     public Transform aimTarget;
     //public CinemachineDollyCart dolly;
 
+    [Space]
+
+    [Header("Sound Effects")]
+
+    public AudioClip mainWeaponSound;
+    public AudioClip altWeaponSound;
+
     // Start is called before the first frame update
     void Start()
     {
         playerModel = transform.GetChild(0);
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -73,6 +84,7 @@ public class PlayerController : MonoBehaviour
         {
             //Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
             Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.transform.rotation);
+            playerAudio.PlayOneShot(mainWeaponSound, 0.5f);
 
         }
         // Move player around field of view camera.

@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
 {
     private Transform playerModel;
 
-
-
     [Header("Parameters")]
     public float xySpeed = 10;
     public float lookSpeed = 50;
@@ -34,7 +32,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerModel = transform.GetChild(0);
-        
     }
 
     // Update is called once per frame
@@ -42,9 +39,6 @@ public class PlayerController : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-
-        
-
 
         LocalMove(h, v, xySpeed);
         RotationLook(h, v, lookSpeed);

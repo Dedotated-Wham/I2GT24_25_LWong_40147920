@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     //Power Up Shield
 
+    private ShieldHealthBar shieldHealthBar;           //Reference ShieldHealthBar script.
     public bool hasPowerUpShield;
     public int shieldHealth = 3;
 
@@ -56,6 +57,8 @@ public class PlayerController : MonoBehaviour
         playerModel = transform.GetChild(0);
         playerAudio = GetComponent<AudioSource>();
         playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
+        shieldHealthBar = GetComponent<ShieldHealthBar>();
+        //hasPowerUpShield = false;                           
     }
 
     // Update is called once per frame
@@ -191,10 +194,10 @@ public class PlayerController : MonoBehaviour
         }
 
         if (other.gameObject.tag == "Power Up Shield" && !hasPowerUpShield)
-        {
+        {     
             hasPowerUpShield = true;
             Destroy(other.gameObject);              //Destroy the power up object.
-            Debug.Log("Player Collected Power Up Shield");
+            Debug.Log("Player Collected Power Up Shield");      
         }
 
         // If power up shield = 0 then set to false.

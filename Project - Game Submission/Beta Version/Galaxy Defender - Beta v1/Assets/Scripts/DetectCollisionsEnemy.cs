@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class DetectCollisionsEnemy : MonoBehaviour
 {
+    private PlayerHealth playerHealth;               //Reference PlayerHealth script.
+    private int DamageTaken = 5;
+
     //private PlayerController shieldHealth;
 
     public void Start()
     {
+        playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
         //shieldHealth = GameObject.Find("Player").GetComponent<PlayerController>();
     }
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player") //&& !hasPowerUpShield)
         {
-            Destroy(other.gameObject);          //Destroy Player Object on collision.
+            playerHealth.TakeDamage(DamageTaken); 
+            
+            //Destroy(other.gameObject);          //Destroy Player Object on collision.
             Destroy(gameObject);                //Destroy Enemy Projectile on collision.
             Debug.Log("Enemy Hit Player");
-            //Debug.Break();
-            PlayerManager.isGameOver = true;
+            //PlayerManager.isGameOver = true;       //Moved to PlayerHealth script.
         }
     }
 }

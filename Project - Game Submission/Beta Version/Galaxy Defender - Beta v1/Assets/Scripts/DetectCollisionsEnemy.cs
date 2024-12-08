@@ -5,7 +5,7 @@ using UnityEngine;
 public class DetectCollisionsEnemy : MonoBehaviour
 {
     private PlayerHealth playerHealth;               //Reference PlayerHealth script.
-    private int DamageTaken = 5;
+    private int DamageTaken = 2;
 
     //private PlayerController shieldHealth;
 

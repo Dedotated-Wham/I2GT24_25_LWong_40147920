@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
 {
     private Transform playerModel;
     private AudioSource playerAudio;
+    private PlayerHealth playerHealth;               //Reference PlayerHealth script.
+    private int CrashDamage = 2;
 
     //Power Up Fire Rate 
 
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour
     {
         playerModel = transform.GetChild(0);
         playerAudio = GetComponent<AudioSource>();
+        playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -155,34 +158,24 @@ public class PlayerController : MonoBehaviour
         }
          */
     }
-
     void OnTriggerEnter(Collider other)
     {
         
         if (other.gameObject.tag == "Enemy")
         {
-            Destroy(gameObject);
-            Debug.Log("Player Crashed Into Enemy");
-            //Debug.Break();
-            PlayerManager.isGameOver = true;
-            
+            playerHealth.TakeDamage(CrashDamage);
+            Debug.Log("Player Crashed Into Enemy");   
         }
 
         if (other.gameObject.tag == "Obstacle")
         {
-            Destroy(gameObject);
+            playerHealth.TakeDamage(CrashDamage);
             Debug.Log("Player Crashed Into Obstacle");
-            //Debug.Break();
-            PlayerManager.isGameOver = true;
-
         }
         if (other.gameObject.tag == "End Level")
         {
-            //Destroy(gameObject);
             Debug.Log("Player Reached The End Of Level");
             PlayerManager.isGameOver = true;
-            Debug.Break();
-
         }
 
         if (other.gameObject.tag == "Power Up Fire Rate" && !hasPowerUpFireRate)

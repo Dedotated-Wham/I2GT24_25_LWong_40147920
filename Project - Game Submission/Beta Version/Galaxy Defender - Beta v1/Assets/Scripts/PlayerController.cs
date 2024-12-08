@@ -10,7 +10,17 @@ public class PlayerController : MonoBehaviour
     private Transform playerModel;
     private AudioSource playerAudio;
 
+    //Power Up Fire Rate 
 
+    public bool hasPowerUpFireRate;
+    public float normalFireRate = 0.5f;               //The time delay between shots.
+    public float powerUpFireRate = 0.2f;              //The time delay between shots.
+    private float nextFire = 0.0f;              //The time of the next shot.
+
+    //Power Up Shield
+
+    public bool hasPowerUpShield;
+    public int shieldHealth = 3;
 
     [Header("Parameters")]
     public float xySpeed = 10;
@@ -80,13 +90,19 @@ public class PlayerController : MonoBehaviour
         */
 
         //Fire projectile from player location and direction player is facing.
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)
         {
             //Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
+            nextFire = Time.time + normalFireRate;
+            Shoot();
+        }
+
+        void Shoot()
+        {
             Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.transform.rotation);
             playerAudio.PlayOneShot(mainWeaponSound, 0.5f);
-
         }
+
         // Move player around field of view camera.
         void LocalMove(float x, float y, float speed)
         {
@@ -169,8 +185,36 @@ public class PlayerController : MonoBehaviour
 
         }
 
-    }
+        if (other.gameObject.tag == "Power Up Fire Rate" && !hasPowerUpFireRate)
+        {
+            Destroy(other.gameObject);              //Destroy the power up object.
+            hasPowerUpFireRate = true;
+            normalFireRate = powerUpFireRate;     //Increase the fire rate by x seconds.
+            
+            Debug.Log("Player Collected Power Up");
 
+            //Start Duration Countdown
+            StartCoroutine(FireRateCountdown());
+        }
+
+        if (other.gameObject.tag == "Power Up Shield" && !hasPowerUpShield)
+        {
+            hasPowerUpShield = true;
+            Destroy(other.gameObject);              //Destroy the power up object.
+            Debug.Log("Player Collected Power Up Shield");
+        }
+
+        // If power up shield = 0 then set to false.
+        //Destroy shield. make boolean false.
+
+    }
+    IEnumerator FireRateCountdown()
+    {
+        Debug.Log("Starting Countdown");
+        yield return new WaitForSeconds(5);
+        normalFireRate = 0.5f;                   //Using a float temporarily here but can improve and change to a declared float.
+        hasPowerUpFireRate = false;
+    }
 
 
 

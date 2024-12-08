@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Obstacle
   - End Level
+  - Power Up Fire Rate
+  - Power Up Shield
   layers:
   - Default
   - TransparentFX

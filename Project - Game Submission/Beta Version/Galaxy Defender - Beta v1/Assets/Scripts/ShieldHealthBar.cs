@@ -4,58 +4,88 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ShieldHealthBar : MonoBehaviour
-{   
-    public ShieldHealth shieldHealth;               //Reference ShieldHealth script.
-    public Image fillImage;
-    private Slider slider;
+{
+    public ShieldHealth shieldHealth;         // Reference to ShieldHealth script
+    public Image fillImage;                   // Reference to the fill Image component of the shield bar
+    private Slider slider;                    // Reference to the Slider component
 
-    //private PlayerController player;         //Reference PlayerController script.
-    public GameObject player;                 //Reference to the player object.
+    public GameObject player;                 // Reference to the player object
+
     void Awake()
     {
+        // Try to get the Slider component attached to this GameObject
+        slider = GetComponent<Slider>();
 
-        if (player == null)
+        if (slider == null)
         {
-            Debug.LogError("Player object is not assigned.");
+            Debug.LogError("Slider component is missing on this GameObject!");
         }
 
-        slider = GetComponent<Slider>();
-        //PlayerController holder = player.GetComponent<PlayerController>();
-        fillImage.enabled = false;             //Shield Bar to be disabled at start before getting power up.
+        fillImage.enabled = false;  // Shield Bar is hidden until the player gets the shield power-up
     }
 
-
-    // Update is called once per frame
     void Update()
     {
+        // If shieldHealth is missing, exit early
+        if (shieldHealth == null)
+        {
+            Debug.LogError("ShieldHealth script reference is missing!");
+            return;
+        }
+
+        // Check for shield status and update the shield health slider
+        UpdateShieldBar();
+
+        // If the shield is depleted (value is 0), hide the shield bar
+        if (slider.value <= 0f)
+        {
+            fillImage.enabled = false;
+        }
+
+        // Check if the player has the shield power-up, and show the shield bar
         CheckForShield();
-    }   
+    }
+
+    // Method to update the shield bar based on current shield health
+    void UpdateShieldBar()
+    {
+        // Ensure the slider's value stays between 0 and 1 (for visual representation)
+        float fillValue = shieldHealth.currentShieldHealth / shieldHealth.maxShieldHealth;
+        slider.value = Mathf.Clamp(fillValue, 0f, 1f);  // Clamps value to [0, 1]
+
+        // Update the fill image's fill amount (progress bar visualization)
+        fillImage.fillAmount = fillValue;
+    }
+
+    // Check if the player has a shield and update the shield bar visibility accordingly
     void CheckForShield()
     {
-        // Get the PlayerStatus component from the player
+        // Check if player object is assigned
+        if (player == null)
+        {
+            Debug.LogError("Player reference is missing!");
+            return;
+        }
+
+        // Try to get PlayerController from the player object
         PlayerController playerController = player.GetComponent<PlayerController>();
 
         if (playerController != null)
         {
-            // Check if the player has the shield (hasPowerUpShield boolean is true)
+            // If the player has the shield, show the shield bar
             if (playerController.hasPowerUpShield)
             {
-                fillImage.enabled = true;              //Allow bar colour to fill up.
-                //Debug.Log("Player has a shield!");
-                //ApplyShieldPowerUp();
+                fillImage.enabled = true;  // Display shield bar when the shield is active
             }
             else
             {
-                fillImage.enabled = false;              //Disable bar colour when player does not have shield.
-                // Handle the case when the player doesn't have a shield
-                //Debug.Log("Player doesn't have a shield.");
+                fillImage.enabled = false;  // Hide shield bar when no shield is active
             }
         }
         else
         {
-            //Debug.LogError("PlayerStatus script not found on player object.");
+            // If PlayerController is missing on the player object
+            Debug.LogError("PlayerController script not found on player object.");
         }
     }
-    
-        
 }

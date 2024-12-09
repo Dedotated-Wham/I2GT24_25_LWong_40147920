@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour
         void Shoot()
         {
             Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.transform.rotation);
-            playerAudio.PlayOneShot(mainWeaponSound, 0.5f);
+            playerAudio.PlayOneShot(mainWeaponSound, 0.2f);
         }
 
         // Move player around field of view camera.

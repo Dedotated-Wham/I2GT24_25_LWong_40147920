@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage(int DamageTaken)
+    public void TakeDamage(float DamageTaken)
     {
         currentHealth -= DamageTaken;
 

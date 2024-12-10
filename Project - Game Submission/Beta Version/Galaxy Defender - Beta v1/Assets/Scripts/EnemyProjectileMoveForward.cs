@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
-    public float speed = 30.0f;
+    public float speed = 35.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class EnemyProjectile : MonoBehaviour
 
     IEnumerator SelfDestruct()
     {
-        yield return new WaitForSeconds(7f); //Delete Object after x seconds.
+        yield return new WaitForSeconds(2.5f); //Delete Object after x seconds.
         Destroy(gameObject);
         //Debug.Log("Enemy Projectile Self Destructed");
     }

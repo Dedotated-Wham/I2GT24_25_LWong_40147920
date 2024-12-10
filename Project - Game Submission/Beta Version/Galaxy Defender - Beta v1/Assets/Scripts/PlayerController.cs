@@ -15,10 +15,11 @@ public class PlayerController : MonoBehaviour
     //Power Up Fire Rate 
 
     public bool hasPowerUpFireRate;
-    public float normalFireRate = 0.5f;               //The time delay between shots.
-    public float powerUpFireRate = 0.2f;              //The time delay between shots.
-    private float nextFire = 0.0f;              //The time of the next shot.
-
+    public float normalFireRate = 0.6f;               //The time delay between main shots.
+    public float normalAltFireRate = 1.0f;               //The time delay between alt shots.
+    public float powerUpFireRate = 0.3f;              //The time delay between shots.
+    private float nextFire = 0.0f;              //The time of the next shot for main weapon.
+    private float nextAltFire = 0.0f;              //The time of the next shot for alt weapon.
     //Power Up Shield
 
     private ShieldHealthBar shieldHealthBar;           //Reference ShieldHealthBar script.
@@ -35,7 +36,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("Projectile")]
     public GameObject projectilePrefab;
-    public Transform projectileSpawnPoint;
+    public GameObject altProjectilePrefab;
+    public Transform projectileSpawnPointLeft;
+    public Transform projectileSpawnPointRight;
+    public Transform altProjectileSpawnPoint;
 
     [Space]
 
@@ -95,7 +99,7 @@ public class PlayerController : MonoBehaviour
         }
         */
 
-        //Fire projectile from player location and direction player is facing.
+        //Fire main weapon projectile from player location and direction player is facing.
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)
         {
             //Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
@@ -103,10 +107,27 @@ public class PlayerController : MonoBehaviour
             Shoot();
         }
 
+        //Fire alternative weapon projectile from player location and direction player is facing.
+        if (Input.GetKeyDown(KeyCode.F) && Time.time > nextAltFire)
+        {
+            //Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
+            nextAltFire = Time.time + normalAltFireRate;
+            AltShoot();
+        }
+        //Method for main weapon.
         void Shoot()
         {
-            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectileSpawnPoint.transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawnPointLeft.position, projectileSpawnPointLeft.transform.rotation);
+            Instantiate(projectilePrefab, projectileSpawnPointRight.position, projectileSpawnPointRight.transform.rotation);
             playerAudio.PlayOneShot(mainWeaponSound, 0.2f);
+
+        }
+
+        //Method for alternative weapon.
+        void AltShoot()
+        {
+            Instantiate(altProjectilePrefab, altProjectileSpawnPoint.position, altProjectileSpawnPoint.transform.rotation);
+            playerAudio.PlayOneShot(altWeaponSound, 0.2f);
         }
 
         // Move player around field of view camera.
@@ -208,7 +229,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Starting Countdown");
         yield return new WaitForSeconds(5);
-        normalFireRate = 0.5f;                   //Using a float temporarily here but can improve and change to a declared float.
+        normalFireRate = 0.6f;                   //Using a float temporarily here but can improve and change to a declared float.
         hasPowerUpFireRate = false;
     }
 

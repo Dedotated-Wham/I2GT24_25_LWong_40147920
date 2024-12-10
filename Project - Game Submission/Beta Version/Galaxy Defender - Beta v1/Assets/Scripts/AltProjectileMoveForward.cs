@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileMoveForward : MonoBehaviour
+public class AltProjectileMoveForward : MonoBehaviour
 {
-    public float speed = 40.0f;
+    public float speed = 30.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,13 +16,12 @@ public class ProjectileMoveForward : MonoBehaviour
     {
         transform.Translate(Vector3.up * Time.deltaTime * speed);
     }
-  
+
     IEnumerator SelfDestruct()
     {
-        yield return new WaitForSeconds(1.5f); //Destroy object after x seconds.
+        yield return new WaitForSeconds(5f); //Destroy object after x seconds.
         Destroy(gameObject);
         //Debug.Log("Projectile Self Destructed");
     }
-   
-}
 
+}

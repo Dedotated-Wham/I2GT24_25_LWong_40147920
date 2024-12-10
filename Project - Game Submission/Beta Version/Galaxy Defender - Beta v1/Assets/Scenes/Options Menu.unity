@@ -575,7 +575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -588, y: -169}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &679708033
@@ -598,7 +598,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Options \n\nNothing to see here yet. "
+  m_text: "----- Options -----\n\nNothing to see here yet. \n\n----- Issues/Bugs/Notes
+    -----\n\nSome original milestones for the Beta Version were not implemented into
+    this version.\n\n- Have not implemented enemy AI yet to be able to target player.
+    Currently just static enemies firing in a single direction.\n\n- Have not implemented
+    animation/effects on destroying enemies/player or obstacles.\n\n- Sound effects
+    only work for the player firing their weapons at the moment. Unable to get sound
+    effects working on destruction of enemies/obstacles or the Player.\n\n- Have
+    not refined the game level yet with alternative route system, hoping to implement
+    this in the Final Submission due to time constraints for the Beta Version and
+    wanting to focus on getting the gameplay running first."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -661,7 +670,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -224.4513, z: -352.02808, w: 0}
+  m_margin: {x: 0, y: -224.4513, z: -1368.957, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -26,7 +26,7 @@ public class ShieldHealthBar : MonoBehaviour
 
     void Update()
     {
-        // If shieldHealth is missing, exit early
+        // If shieldHealth is missing debug log.
         if (shieldHealth == null)
         {
             Debug.LogError("ShieldHealth script reference is missing!");
@@ -60,14 +60,14 @@ public class ShieldHealthBar : MonoBehaviour
     // Check if the player has a shield and update the shield bar visibility accordingly
     void CheckForShield()
     {
-        // Check if player object is assigned
+        // Check if player object is assigned and debug log.
         if (player == null)
         {
             Debug.LogError("Player reference is missing!");
             return;
         }
 
-        // Try to get PlayerController from the player object
+        // Calling PlayerController script.
         PlayerController playerController = player.GetComponent<PlayerController>();
 
         if (playerController != null)

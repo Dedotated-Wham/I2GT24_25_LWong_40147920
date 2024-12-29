@@ -8424,7 +8424,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1088012678}
   finalScoreText: {fileID: 2145929612}
-  fireRateCountDownText: {fileID: 1232549674}
+  fireRateCountDownUI: {fileID: 1232549674}
+  fireRateCountDownText: {fileID: 1679262317}
   speedBoostCountDownText: {fileID: 0}
 --- !u!4 &1015638440
 Transform:
@@ -9547,7 +9548,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1232549675}
   m_Layer: 5
-  m_Name: IncreasedFireRate
+  m_Name: Increased Fire Rate Power Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11882,6 +11883,7 @@ MonoBehaviour:
   normalFireRate: 0.6
   normalAltFireRate: 1
   powerUpFireRate: 0.3
+  fireRateCountdownTime: 0
   hasPowerUpShield: 0
   shieldHealth: 3
   xySpeed: 10
@@ -13503,7 +13505,7 @@ GameObject:
   - component: {fileID: 1679262318}
   - component: {fileID: 1679262317}
   m_Layer: 5
-  m_Name: Increased Fire Rate Timer Text
+  m_Name: Increased Fire Rate Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

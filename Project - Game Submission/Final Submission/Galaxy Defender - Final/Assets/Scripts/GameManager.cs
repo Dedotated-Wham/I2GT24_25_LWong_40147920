@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI finalScoreText;
 
-    public GameObject fireRateCountDownText;
+    public GameObject fireRateCountDownUI;
+    public TextMeshProUGUI fireRateCountDownText;
     public TextMeshProUGUI speedBoostCountDownText;
 
 
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
         finalScoreText.text = "Final Score: " + score;
 
-        fireRateCountDownText.SetActive(false);
+        fireRateCountDownUI.SetActive(false);
         playerController = FindObjectOfType<PlayerController>();
     }
 
@@ -37,8 +38,12 @@ public class GameManager : MonoBehaviour
         if (playerController.hasPowerUpFireRate)
         {
             Debug.Log("Player has Increased Fire Rate");
-            fireRateCountDownText.SetActive(true);
-            //fireRateCountDownText.text = "Increased Fire Rate: " + playerController.FireRateCountdown;
+            fireRateCountDownUI.SetActive(true);
+            fireRateCountDownText.text = "Increased Fire Rate: " + Mathf.Ceil(playerController.fireRateCountdownTime).ToString();
+        }
+        else
+        {  
+            fireRateCountDownUI.SetActive(false);
         }
     }
 

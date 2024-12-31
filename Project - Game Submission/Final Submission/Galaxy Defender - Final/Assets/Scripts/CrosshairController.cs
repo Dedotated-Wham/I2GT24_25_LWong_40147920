@@ -44,7 +44,12 @@ public class CrosshairController : MonoBehaviour
         float offsetX = (screenPosition.x - Screen.width / 2) * movementFactor;
         float offsetY = (screenPosition.y - Screen.height / 2) * movementFactor;
 
+        /*
         // Apply the calculated offset to the crosshair
         rectTransform.anchoredPosition = new Vector2(offsetX, offsetY);
+        */
+
+        // Smooth the movement of the crosshair
+        rectTransform.anchoredPosition = Vector2.Lerp(rectTransform.anchoredPosition, new Vector2(offsetX, offsetY), Time.deltaTime * 10f);
     }
 }

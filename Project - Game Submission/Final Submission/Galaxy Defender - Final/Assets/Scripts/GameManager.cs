@@ -10,13 +10,26 @@ public class GameManager : MonoBehaviour
 {
     private PlayerController playerController;              //Reference PlayerController script.
 
+    [Header("Score UI")]
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI finalScoreText;
 
+    [Space]
+
+    [Header("Fire Rate Power Up UI")]
     public GameObject fireRateCountDownUI;
     public TextMeshProUGUI fireRateCountDownText;
+
+    [Space]
+
+    [Header("Speed Boost Power Up UI")]
     public TextMeshProUGUI speedBoostCountDownText;
 
+    [Space]
+
+    [Header("Shield Power Up UI")]
+    public TextMeshProUGUI shieldDeactivatedText;
+    public TextMeshProUGUI shieldActivatedText;
 
     private int score;
 

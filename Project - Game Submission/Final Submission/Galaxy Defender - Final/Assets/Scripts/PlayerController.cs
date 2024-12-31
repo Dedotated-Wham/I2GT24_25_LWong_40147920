@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public float normalAltFireRate = 1.0f;               //The time delay between alt shots.
     public float powerUpFireRate = 0.3f;                //The time delay between shots.
     private float nextFire = 0.0f;                      //The time of the next shot for main weapon.
-    private float nextAltFire = 0.0f;                    //The time of the next shot for alt weapon.
+    //private float nextAltFire = 0.0f;                    //The time of the next shot for alt weapon.
 
     public float fireRateCountdownTime;                  // Track the remaining time of the power-up
 

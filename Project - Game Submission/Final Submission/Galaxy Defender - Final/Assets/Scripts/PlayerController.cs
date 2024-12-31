@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Cinemachine;
 
 //using System.Diagnostics;
@@ -68,6 +69,7 @@ public class PlayerController : MonoBehaviour
         shieldHealthBar = GetComponent<ShieldHealthBar>();
 
         fireRateCountdownTime = fireRateTimer;      //Initialise the  fire rate power up timer.
+        //UpdateCrosshairPosition();
         //hasPowerUpShield = false;                           
     }
 
@@ -84,6 +86,9 @@ public class PlayerController : MonoBehaviour
 
         //Move plane forward.
         transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed);
+
+        //UpdateCrosshairPosition();
+
 
         //***Code not working below, to be tested later on.***
         /*
@@ -114,12 +119,15 @@ public class PlayerController : MonoBehaviour
         }
 
         //Fire alternative weapon projectile from player location and direction player is facing.
+        /*
         if (Input.GetKeyDown(KeyCode.F) && Time.time > nextAltFire)
         {
             //Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
             nextAltFire = Time.time + normalAltFireRate;
             AltShoot();
         }
+        */
+
         //Method for main weapon.
         void Shoot()
         {
@@ -130,11 +138,13 @@ public class PlayerController : MonoBehaviour
         }
 
         //Method for alternative weapon.
+        /*
         void AltShoot()
         {
             Instantiate(altProjectilePrefab, altProjectileSpawnPoint.position, altProjectileSpawnPoint.transform.rotation);
             playerAudio.PlayOneShot(altWeaponSound, 0.2f);
         }
+        */
 
         // Move player around field of view camera.
         void LocalMove(float x, float y, float speed)
@@ -178,6 +188,7 @@ public class PlayerController : MonoBehaviour
             dolly.m_Speed = x;
         }
         */
+
         /*
         private void OnDrawGizmos()
         {
@@ -188,6 +199,7 @@ public class PlayerController : MonoBehaviour
         }
          */
     }
+
     void OnTriggerEnter(Collider other)
     {
         

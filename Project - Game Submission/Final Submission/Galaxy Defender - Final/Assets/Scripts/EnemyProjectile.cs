@@ -12,7 +12,7 @@ public class EnemyProjectile : MonoBehaviour
 
     IEnumerator SelfDestruct()
     {
-        yield return new WaitForSeconds(1.5f); //Delete Object after x seconds.
+        yield return new WaitForSeconds(2.5f); //Delete Object after x seconds.
         Destroy(gameObject);
         Debug.Log("Enemy Projectile Self Destructed");
     }

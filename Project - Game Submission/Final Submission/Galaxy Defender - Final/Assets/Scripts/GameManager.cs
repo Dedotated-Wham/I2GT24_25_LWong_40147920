@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         finalScoreText.text = "Final Score: " + score;
 
         fireRateCountDownUI.SetActive(false);
+        
         playerController = FindObjectOfType<PlayerController>();
     }
 

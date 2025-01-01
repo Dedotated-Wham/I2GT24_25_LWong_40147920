@@ -403,13 +403,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  turretHead: {fileID: 4962368466674016248}
-  projectilePrefab: {fileID: 188317759609223644, guid: 981b916f9a2c3684ab62f35810c055b3, type: 3}
-  leftFirePoint: {fileID: 962763987365076426}
-  rightFirePoint: {fileID: 7914585648238126763}
+  turretHead: {fileID: 0}
+  projectilePrefab: {fileID: 0}
+  leftFirePoint: {fileID: 0}
+  rightFirePoint: {fileID: 0}
   fireRate: 1
-  rotationSpeed: 5
+  rotationSpeed: 10
   detectionRange: 50
+  projectileSpeed: 100
 --- !u!65 &7433045059220338717
 BoxCollider:
   m_ObjectHideFlags: 0

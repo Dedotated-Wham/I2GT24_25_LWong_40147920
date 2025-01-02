@@ -28,7 +28,9 @@ public class GameManager : MonoBehaviour
     [Space]
 
     [Header("Shield Power Up UI")]
+    public GameObject shieldDeactivatedUI;
     public TextMeshProUGUI shieldDeactivatedText;
+    public GameObject shieldActivatedUI;
     public TextMeshProUGUI shieldActivatedText;
 
     private int score;
@@ -58,6 +60,18 @@ public class GameManager : MonoBehaviour
         else
         {  
             fireRateCountDownUI.SetActive(false);
+        }
+
+        if (playerController.hasPowerUpShield)
+        {
+            Debug.Log("Player has Shield");
+            shieldActivatedUI.SetActive(true);
+            shieldDeactivatedUI.SetActive(false);
+        }
+        else
+        {
+            shieldActivatedUI.SetActive(false);
+            shieldDeactivatedUI.SetActive(true);
         }
     }
 

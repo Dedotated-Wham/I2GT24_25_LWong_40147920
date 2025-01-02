@@ -1360,7 +1360,7 @@ Transform:
   m_GameObject: {fileID: 99810929}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 2.5, z: 100}
+  m_LocalPosition: {x: 0.2, y: 2.5, z: 25}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8235,7 +8235,9 @@ MonoBehaviour:
   fireRateCountDownUI: {fileID: 1232549674}
   fireRateCountDownText: {fileID: 1679262317}
   speedBoostCountDownText: {fileID: 0}
+  shieldDeactivatedUI: {fileID: 628848065}
   shieldDeactivatedText: {fileID: 1653613943}
+  shieldActivatedUI: {fileID: 2125813925}
   shieldActivatedText: {fileID: 1753989605}
 --- !u!4 &1015638440
 Transform:
@@ -14478,7 +14480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1753989604
 RectTransform:
   m_ObjectHideFlags: 0

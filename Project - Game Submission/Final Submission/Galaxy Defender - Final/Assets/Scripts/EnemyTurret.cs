@@ -54,7 +54,7 @@ public class EnemyTurret : MonoBehaviour
         else
         {
             isPlayerInRange = false;
-            Debug.Log("Player is not in range");
+            //Debug.Log("Player is not in range");
         }
     }
     void RotateTurretTowardsPlayer()

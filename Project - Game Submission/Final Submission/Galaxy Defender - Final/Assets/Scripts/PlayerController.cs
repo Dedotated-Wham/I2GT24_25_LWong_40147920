@@ -217,7 +217,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "End Level")
         {
             Debug.Log("Player Reached The End Of Level");
-            PlayerManager.isGameOver = true;
+            PlayerManager.isLevelComplete = true;
         }
 
         if (other.gameObject.tag == "Power Up Fire Rate" && !hasPowerUpFireRate)

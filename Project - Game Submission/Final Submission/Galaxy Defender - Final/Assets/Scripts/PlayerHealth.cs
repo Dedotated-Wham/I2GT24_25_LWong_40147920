@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float maxHealth = 10;
+    public float maxHealth = 20;
     public float currentHealth;
     //public float amount = 1;
 

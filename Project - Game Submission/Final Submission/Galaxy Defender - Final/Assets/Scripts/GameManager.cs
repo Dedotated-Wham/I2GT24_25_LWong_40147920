@@ -12,7 +12,8 @@ public class GameManager : MonoBehaviour
 
     [Header("Score UI")]
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI finalScoreText;
+    public TextMeshProUGUI gameOverFinalScoreText;
+    public TextMeshProUGUI LevelCompleteFinalScoreText;
 
     [Space]
 
@@ -41,7 +42,8 @@ public class GameManager : MonoBehaviour
     {
         score = 0;                                     //Set score to 0 initially.
         scoreText.text = "Score: " + score;
-        finalScoreText.text = "Final Score: " + score;
+        gameOverFinalScoreText.text = "Final Score: " + score;
+        LevelCompleteFinalScoreText.text = "Final Score: " + score;
 
         fireRateCountDownUI.SetActive(false);
         
@@ -64,7 +66,7 @@ public class GameManager : MonoBehaviour
 
         if (playerController.hasPowerUpShield)
         {
-            Debug.Log("Player has Shield");
+            //Debug.Log("Player has Shield");
             shieldActivatedUI.SetActive(true);
             shieldDeactivatedUI.SetActive(false);
         }
@@ -80,7 +82,12 @@ public class GameManager : MonoBehaviour
         
         score += scoreToAdd;                           //Adds whatever value the int scoreToAdd is onto the current score value.
         scoreText.text = "Score: " + score;
-        finalScoreText.text = "Final Score: " + score;
+        gameOverFinalScoreText.text = "Final Score: " + score;
+        LevelCompleteFinalScoreText.text = "" + score;
+    }
+    public int GetScore()
+    {
+        return score;  // Return the current score
     }
 
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShieldHealth : MonoBehaviour
 {
-    public float maxShieldHealth = 4;               //Max Shield Health float.
+    public float maxShieldHealth = 10;               //Max Shield Health float.
     public float currentShieldHealth;               //Current Shield Health.
 
     private PlayerHealth playerHealth;              // Reference to the PlayerHealth script

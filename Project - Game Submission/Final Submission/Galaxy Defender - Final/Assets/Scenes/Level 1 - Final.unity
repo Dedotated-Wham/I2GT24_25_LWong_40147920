@@ -2160,6 +2160,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 1569582151}
   levelCompleteScreen: {fileID: 1945992268}
   crosshairUI: {fileID: 938829826}
+  dollyCart: {fileID: 904284774}
 --- !u!4 &146238999
 Transform:
   m_ObjectHideFlags: 0

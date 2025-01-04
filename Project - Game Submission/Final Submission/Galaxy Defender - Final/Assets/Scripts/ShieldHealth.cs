@@ -11,12 +11,17 @@ public class ShieldHealth : MonoBehaviour
     private PlayerController playerController;          //Referece to the PlayerController.
     private bool shieldActivated = false;         // Boolean to ensure the shield is only activated once, boolean only in this script.
 
+    public GameObject brokenShield;
+
+    private bool shieldDepleted = false; // To ensure the broken shield is only instantiated once per depletion.
+
     // Start is called before the first frame update
     void Start()
     {
         currentShieldHealth = 0;          //Initially no shield applied.
         playerHealth = GetComponent<PlayerHealth>(); // Get the PlayerHealth script attached to the same GameObject.
         playerController = GetComponent<PlayerController>(); // Get the PlayerController script attached to the same GameObject.
+        
     }
 
     // Update is called once per frame
@@ -27,14 +32,22 @@ public class ShieldHealth : MonoBehaviour
         {
             currentShieldHealth = maxShieldHealth;          //Set shield health to max.
             shieldActivated = true;  // Mark shield as activated
+            shieldDepleted = false; // Reset shieldDepleted flag when shield is reactivated
             //Debug.Log("Shield activated! Current shield health: " + currentShieldHealth);
         }
 
-        if (currentShieldHealth <= 0f && playerController.hasPowerUpShield)     //If player loses shield and still has the power up shield boolean from another script, turn it off.
+        if (currentShieldHealth <= 0f && playerController.hasPowerUpShield && !shieldDepleted) //If player loses shield and still has the power up shield boolean from another script, turn it off.
         {
             playerController.hasPowerUpShield = false;  // Deactivate the shield power-up boolean from another script.
             shieldActivated = false;                    //Deactivate the shield activated boolean from this script.
             Debug.Log("Shield is depleted. Shield power-up is now inactive.");
+
+            // Instantiate the broken shield object at the player's position
+            if (brokenShield != null)
+            {
+                Instantiate(brokenShield, transform.position, transform.rotation);
+                shieldDepleted = true; // Prevent multiple instantiations until the shield is reactivated
+            }
         }
         
     }

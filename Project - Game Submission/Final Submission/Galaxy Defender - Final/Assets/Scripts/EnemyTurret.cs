@@ -11,9 +11,9 @@ public class EnemyTurret : MonoBehaviour
     public Transform rightFirePoint;        //Fire point for the right gun barrel. Part of the gun object.
     public float fireRate = 1.0f;           //Time between shots.
     public float rotationSpeed = 10.0f;      //Speed of the rotation for the Turret Head.
-    public float detectionRange = 50f;    //The range at which the turret detects the player.
-    public float projectileSpeed = 100f;  //Projectile Speed
-    public float predictionLeadTime = 100.0f; // How much ahead of the player the turret should fire (in seconds).
+    public float detectionRange = 100f;    //The range at which the turret detects the player.
+    public float projectileSpeed = 50f;  //Projectile Speed
+    public float predictionLeadTime = 5.0f; // How much ahead of the player the turret should fire (in seconds).
 
 
     private float nextFireTime = 0f;        //Time when turret is allowed to fire again.

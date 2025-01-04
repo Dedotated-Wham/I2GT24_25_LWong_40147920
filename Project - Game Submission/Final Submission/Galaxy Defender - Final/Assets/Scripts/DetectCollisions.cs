@@ -9,11 +9,16 @@ public class DetectCollisions : MonoBehaviour
     private int scoreToAdd = 1;
     private AudioSource projectileAudio;
 
+    public GameObject explosionPrefabEnemy;
+    public GameObject explosionPrefabObstacle;
 
     [Header("Sound Effects")]
 
     public AudioClip obstacleSound;
     public AudioClip enemySound;
+
+  
+
 
     private void Start()
     {
@@ -25,7 +30,8 @@ public class DetectCollisions : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            //projectileAudio.PlayOneShot(enemySound, 5.0f);       //To be checked.
+            //projectileAudio.PlayOneShot(enemySound, 5.0f);       //To be checked.                                      
+            Instantiate(explosionPrefabEnemy, transform.position, transform.rotation);  //Instantiate explosion on enemy object position.
             Destroy(other.gameObject);              //This will destroy the enemy object.
             Destroy(gameObject);                    //This will destroy the player projectile.
             gameManager.UpdateScore(scoreToAdd);    //Add score to the game manager script whenever an enemy is destroyed.   
@@ -35,8 +41,10 @@ public class DetectCollisions : MonoBehaviour
         if (other.gameObject.tag == "Obstacle")
         {
             //projectileAudio.PlayOneShot(obstacleSound, 5.0f);       //To be checked.
+            Instantiate(explosionPrefabObstacle, transform.position, transform.rotation);  //Instantiate explosion on enemy object position.
             Destroy(gameObject);                //This will destroy the player projectile.
             Destroy(other.gameObject);          //This will destroy the obstacle.
+
             Debug.Log("Bullet Hit Obstacle");
         }
 

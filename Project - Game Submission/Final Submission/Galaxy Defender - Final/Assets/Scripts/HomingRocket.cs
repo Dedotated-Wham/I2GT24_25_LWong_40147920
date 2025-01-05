@@ -15,6 +15,14 @@ public class HomingRocket : MonoBehaviour
     public GameObject homingRocketPrefab;  // The rocket prefab to instantiate
     public Transform homingRocketSpawn;    // The spawn point for the rocket
 
+    [Space]
+
+    [Header("Sound Effects")]
+    public AudioClip homingRocketSound;
+    private AudioSource playerAudio;
+
+    [Space]
+
     private bool isLaunched = false; // Flag to check if the rocket is launched
     private Transform player; // Reference to the player's position
     private Transform lockedOnTarget; // Internal locked target (for the rocket's behavior)
@@ -25,6 +33,8 @@ public class HomingRocket : MonoBehaviour
     {
         // Find and store the player's transform (assuming the player has the tag "Player")
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,6 +44,8 @@ public class HomingRocket : MonoBehaviour
         if (!isLaunched && Input.GetKeyDown(KeyCode.F)) // Press "F" to launch
         {
             LaunchRocket();
+            playerAudio.PlayOneShot(homingRocketSound, 0.2f);
+            Debug.Log("Fired Rocket");
         }
     }
 

@@ -28,7 +28,13 @@ public class DetectCollisions : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            //projectileAudio.PlayOneShot(enemySound, 5.0f);       //To be checked.                                      
+            AudioSource enemyAudio = other.gameObject.GetComponent<AudioSource>();
+
+            if (enemyAudio != null && enemySound != null)
+            {
+                enemyAudio.PlayOneShot(enemySound, 0.2f); // Play the sound with a delay if necessary
+            }
+
             Instantiate(explosionPrefabEnemy, transform.position, transform.rotation);  //Instantiate explosion on enemy object position.
             Destroy(other.gameObject);              //This will destroy the enemy object.
             Destroy(gameObject);                    //This will destroy the player projectile.

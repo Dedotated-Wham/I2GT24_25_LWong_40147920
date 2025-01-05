@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876f782727185794297f17a8bb313884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionPrefabEnemy: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
+  explosionPrefabObstacle: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
   obstacleSound: {fileID: 8300000, guid: e553e6ed5969942438d7327a51b9e068, type: 3}
   enemySound: {fileID: 8300000, guid: 0d995cf18279e3d4dac8602172a0dcc1, type: 3}
 --- !u!82 &-7411644542326034865

@@ -10934,7 +10934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1032487636}
   m_Layer: 0
-  m_Name: Projectile 2 Spawn Position
+  m_Name: Homing Rocket Spawn Position
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10949,7 +10949,7 @@ Transform:
   m_GameObject: {fileID: 1032487635}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: -0.75, z: -0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15306,6 +15306,7 @@ GameObject:
   - component: {fileID: 1499951085}
   - component: {fileID: 1499951086}
   - component: {fileID: 1499951087}
+  - component: {fileID: 1499951088}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -15359,10 +15360,8 @@ MonoBehaviour:
   forwardSpeed: 0
   rollSpeed: 100
   projectilePrefab: {fileID: 9072614666678335309, guid: 007df7972b1146f40a8ff83d0b10b988, type: 3}
-  altProjectilePrefab: {fileID: 9072614666678335309, guid: 6d8d8ae9cb8657a4a9751acc5117deb6, type: 3}
   projectileSpawnPointLeft: {fileID: 1937001796}
   projectileSpawnPointRight: {fileID: 1828711578}
-  altProjectileSpawnPoint: {fileID: 1032487636}
   cameraParent: {fileID: 432187806}
   aimTarget: {fileID: 628119145}
   mainWeaponSound: {fileID: 8300000, guid: 779a2065ddbe1664b83a00c7ab943eae, type: 3}
@@ -15542,6 +15541,24 @@ MonoBehaviour:
   maxShieldHealth: 10
   currentShieldHealth: 0
   brokenShield: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9, type: 3}
+--- !u!114 &1499951088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499951080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f0b2b8570dc164cb9a305d4869f504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockOnRange: 100
+  homingStrength: 5
+  rocketSpeed: 15
+  lockedOnTarget: {fileID: 0}
+  homingRocketPrefab: {fileID: 9072614666678335309, guid: 6d8d8ae9cb8657a4a9751acc5117deb6, type: 3}
+  homingRocketSpawn: {fileID: 1032487636}
 --- !u!1 &1505272562
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,10 +41,10 @@ public class PlayerController : MonoBehaviour
 
     [Header("Projectile")]
     public GameObject projectilePrefab;
-    public GameObject altProjectilePrefab;
+    //public GameObject altProjectilePrefab;
     public Transform projectileSpawnPointLeft;
     public Transform projectileSpawnPointRight;
-    public Transform altProjectileSpawnPoint;
+    //public Transform altProjectileSpawnPoint;
 
     [Space]
 
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Sound Effects")]
     public AudioClip mainWeaponSound;
-    public AudioClip altWeaponSound;
+    //public AudioClip altWeaponSound;
 
     // Start is called before the first frame update
     void Start()

@@ -9939,6 +9939,7 @@ GameObject:
   m_Component:
   - component: {fileID: 904284773}
   - component: {fileID: 904284774}
+  - component: {fileID: 904284775}
   m_Layer: 0
   m_Name: PlayerModel
   m_TagString: Player
@@ -9981,6 +9982,23 @@ MonoBehaviour:
   m_PositionUnits: 1
   m_Speed: 15
   m_Position: 0
+--- !u!114 &904284775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904284772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f0b2b8570dc164cb9a305d4869f504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockOnRange: 100
+  homingStrength: 5
+  rocketSpeed: 15
+  homingRocketPrefab: {fileID: 9072614666678335309, guid: 6d8d8ae9cb8657a4a9751acc5117deb6, type: 3}
+  homingRocketSpawn: {fileID: 1032487636}
 --- !u!1 &923396783
 GameObject:
   m_ObjectHideFlags: 0
@@ -10948,13 +10966,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032487635}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.75, z: -0.5}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1499951081}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1063819367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11005,7 +11023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8543468556412676481, guid: 039faeb266019814c95305f54265fee8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17
+      value: -6.3
       objectReference: {fileID: 0}
     - target: {fileID: 8543468556412676481, guid: 039faeb266019814c95305f54265fee8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15306,7 +15324,6 @@ GameObject:
   - component: {fileID: 1499951085}
   - component: {fileID: 1499951086}
   - component: {fileID: 1499951087}
-  - component: {fileID: 1499951088}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -15350,7 +15367,6 @@ MonoBehaviour:
   hasPowerUpFireRate: 0
   fireRateTimer: 5
   normalFireRate: 0.6
-  normalAltFireRate: 1
   powerUpFireRate: 0.3
   fireRateCountdownTime: 0
   hasPowerUpShield: 0
@@ -15365,7 +15381,6 @@ MonoBehaviour:
   cameraParent: {fileID: 432187806}
   aimTarget: {fileID: 628119145}
   mainWeaponSound: {fileID: 8300000, guid: 779a2065ddbe1664b83a00c7ab943eae, type: 3}
-  altWeaponSound: {fileID: 8300000, guid: 89573f7baeb8f8345946674021cf179b, type: 3}
 --- !u!65 &1499951083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15522,7 +15537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 031557e58933d22418ec4e2b2f78ca72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 100
   currentHealth: 20
   explosionPrefabPlayer: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
   damagedShip: {fileID: 2119178043}
@@ -15541,24 +15556,6 @@ MonoBehaviour:
   maxShieldHealth: 10
   currentShieldHealth: 0
   brokenShield: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9, type: 3}
---- !u!114 &1499951088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499951080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4f0b2b8570dc164cb9a305d4869f504, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lockOnRange: 100
-  homingStrength: 5
-  rocketSpeed: 15
-  lockedOnTarget: {fileID: 0}
-  homingRocketPrefab: {fileID: 9072614666678335309, guid: 6d8d8ae9cb8657a4a9751acc5117deb6, type: 3}
-  homingRocketSpawn: {fileID: 1032487636}
 --- !u!1 &1505272562
 GameObject:
   m_ObjectHideFlags: 0

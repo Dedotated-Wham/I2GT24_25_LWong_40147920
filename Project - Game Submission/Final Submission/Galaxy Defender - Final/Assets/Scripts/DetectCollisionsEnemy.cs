@@ -24,7 +24,7 @@ public class DetectCollisionsEnemy : MonoBehaviour
                 shieldHealth.ApplyDamage(damageTaken);
 
             Destroy(gameObject);                //Destroy Enemy Projectile on collision.
-            Debug.Log("Enemy Hit Player");
+            //Debug.Log("Enemy Hit Player");
 
         }
     }

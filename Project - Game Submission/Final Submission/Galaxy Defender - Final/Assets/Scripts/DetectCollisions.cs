@@ -9,6 +9,8 @@ public class DetectCollisions : MonoBehaviour
     private int scoreToAdd = 1;
     private AudioSource projectileAudio;
 
+    private HomingRocket homingRocketScript; // Reference to the HomingRocket script
+
     public GameObject explosionPrefabEnemy;
     public GameObject explosionPrefabObstacle;
 
@@ -16,10 +18,6 @@ public class DetectCollisions : MonoBehaviour
 
     public AudioClip obstacleSound;
     public AudioClip enemySound;
-
-  
-
-
     private void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();         //Find Game Manager object and find it's game manager script.
@@ -34,8 +32,9 @@ public class DetectCollisions : MonoBehaviour
             Instantiate(explosionPrefabEnemy, transform.position, transform.rotation);  //Instantiate explosion on enemy object position.
             Destroy(other.gameObject);              //This will destroy the enemy object.
             Destroy(gameObject);                    //This will destroy the player projectile.
-            gameManager.UpdateScore(scoreToAdd);    //Add score to the game manager script whenever an enemy is destroyed.   
-            Debug.Log("Bullet Hit Enemy");
+            gameManager.UpdateScore(scoreToAdd);    //Add score to the game manager script whenever an enemy is destroyed.
+
+            //Debug.Log("Bullet Hit Enemy");
         }
     
         if (other.gameObject.tag == "Obstacle")
@@ -45,20 +44,13 @@ public class DetectCollisions : MonoBehaviour
             Destroy(gameObject);                //This will destroy the player projectile.
             Destroy(other.gameObject);          //This will destroy the obstacle.
 
-            Debug.Log("Bullet Hit Obstacle");
+            //Debug.Log("Bullet Hit Obstacle");
         }
 
         if (other.gameObject.tag == "Environment")
         {
             Destroy(gameObject);                //This will destroy the player projectile when it hits the environment.
-            Debug.Log("Bullet Hit Environment");
+            //Debug.Log("Bullet Hit Environment");
         }
     }
-
- 
-
- 
-
-
-
 }

@@ -14,6 +14,6 @@ public class EnemyProjectile : MonoBehaviour
     {
         yield return new WaitForSeconds(2.5f); //Delete Object after x seconds.
         Destroy(gameObject);
-        Debug.Log("Enemy Projectile Self Destructed");
+        //Debug.Log("Enemy Projectile Self Destructed");
     }
 }

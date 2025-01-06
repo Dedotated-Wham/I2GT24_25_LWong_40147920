@@ -122,6 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56500e43c6d99294d800ea38af53d499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManager: {fileID: 0}
+  playerHitSound: {fileID: 8300000, guid: c26d95c7422680f4e8aaf8c25080b786, type: 3}
 --- !u!54 &7821445119208900973
 Rigidbody:
   m_ObjectHideFlags: 0

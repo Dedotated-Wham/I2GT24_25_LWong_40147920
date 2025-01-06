@@ -6,7 +6,8 @@ public class HomingProjectile : MonoBehaviour
 {
     
     private GameManager gameManager;         //Reference GameManager script and call it gameManager inside this script.
-    private int scoreToAdd = 1;
+    private int enemyScoreToAdd = 2;
+    private int obstacleScoreToAdd = 1;
     private HomingRocket homingRocketScript; // Reference to the HomingRocket script
     private AudioSource projectileAudio;
 
@@ -125,7 +126,7 @@ public class HomingProjectile : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(DestroyAfterSound()); // Adjust the delay to the length of the sound if needed
 
-            gameManager.UpdateScore(scoreToAdd);    //Add score to the game manager script whenever an enemy is destroyed.
+            gameManager.UpdateScore(enemyScoreToAdd);    //Add score to the game manager script whenever an enemy is destroyed.
 
             // Reset the launch flag in the HomingRocket script
             homingRocketScript.ResetLaunchFlag();
@@ -143,6 +144,7 @@ public class HomingProjectile : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(DestroyAfterSound()); // Adjust the delay to the length of the sound if needed
 
+            gameManager.UpdateScore(obstacleScoreToAdd);    //Add score to the game manager script whenever an enemy is destroyed.
             // Reset the launch flag in the HomingRocket script
             homingRocketScript.ResetLaunchFlag();
         }

@@ -6,7 +6,8 @@ using UnityEngine;
 public class DetectCollisions : MonoBehaviour
 {
     private GameManager gameManager;         //Reference GameManager script and call it gameManager inside this script.
-    private int scoreToAdd = 1;
+    private int enemyScoreToAdd = 2;
+    private int obstacleScoreToAdd = 1;
     private AudioSource projectileAudio;
 
     private HomingRocket homingRocketScript; // Reference to the HomingRocket script
@@ -40,7 +41,7 @@ public class DetectCollisions : MonoBehaviour
             // Call a coroutine to delay destruction of the projectile to let the sound play
             StartCoroutine(DestroyAfterSound()); // Adjust the delay to the length of the sound if needed
 
-            gameManager.UpdateScore(scoreToAdd);    // Add score to the game manager script whenever an enemy is destroyed.
+            gameManager.UpdateScore(enemyScoreToAdd);    // Add score to the game manager script whenever an enemy is destroyed.
         }
 
         if (other.gameObject.tag == "Obstacle")
@@ -56,6 +57,8 @@ public class DetectCollisions : MonoBehaviour
             //Destroy(gameObject);
             // Call a coroutine to delay destruction of the projectile
             StartCoroutine(DestroyAfterSound()); // Adjust the delay to the length of the sound if needed
+
+            gameManager.UpdateScore(obstacleScoreToAdd);    // Add score to the game manager script whenever an enemy is destroyed.
         }
 
         if (other.gameObject.tag == "Environment")

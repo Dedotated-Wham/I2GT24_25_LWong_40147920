@@ -27,7 +27,7 @@ public class ExplosionSelfDelete : MonoBehaviour
     private IEnumerator DestroyExplosionAfterDuration()
     {
         // Wait for the particle system's duration to finish
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
 
         // Destroy the game object once the particles are done
         Destroy(gameObject);

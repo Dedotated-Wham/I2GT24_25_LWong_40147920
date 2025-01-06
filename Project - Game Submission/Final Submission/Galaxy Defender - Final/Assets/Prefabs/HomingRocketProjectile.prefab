@@ -136,8 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefabEnemy: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
   explosionPrefabObstacle: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
-  obstacleSound: {fileID: 0}
-  enemySound: {fileID: 0}
+  obstacleSound: {fileID: 8300000, guid: bc211d29a8f9ccd4a9f00d23379f4cce, type: 3}
+  enemySound: {fileID: 8300000, guid: 8e227b38e5b901345b120191fba24fe6, type: 3}
 --- !u!82 &7857960811067652858
 AudioSource:
   m_ObjectHideFlags: 0

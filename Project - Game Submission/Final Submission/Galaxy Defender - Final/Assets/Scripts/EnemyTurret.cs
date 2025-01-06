@@ -15,19 +15,12 @@ public class EnemyTurret : MonoBehaviour
     public float projectileSpeed = 50f;  //Projectile Speed
     public float predictionLeadTime = 5.0f; // How much ahead of the player the turret should fire (in seconds).
 
-    [Space]
-
-    [Header("Sound Parameters")]
-    private AudioSource enemyAudio;
-    public AudioClip destroyedSound;
-
-
     private float nextFireTime = 0f;        //Time when turret is allowed to fire again.
     private bool isPlayerInRange = false;   //Check whether player is in range of the turret's detection.
 
     public void Start()
     {
-        enemyAudio = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame

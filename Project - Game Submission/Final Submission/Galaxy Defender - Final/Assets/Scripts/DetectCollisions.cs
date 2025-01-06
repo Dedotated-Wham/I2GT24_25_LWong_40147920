@@ -28,29 +28,34 @@ public class DetectCollisions : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            AudioSource enemyAudio = other.gameObject.GetComponent<AudioSource>();
 
-            if (enemyAudio != null && enemySound != null)
+            if (projectileAudio != null && enemySound != null)
             {
-                enemyAudio.PlayOneShot(enemySound, 0.2f); // Play the sound with a delay if necessary
+                projectileAudio.PlayOneShot(enemySound, 0.4f); // Play the sound with a delay if necessary
             }
 
-            Instantiate(explosionPrefabEnemy, transform.position, transform.rotation);  //Instantiate explosion on enemy object position.
-            Destroy(other.gameObject);              //This will destroy the enemy object.
-            Destroy(gameObject);                    //This will destroy the player projectile.
-            gameManager.UpdateScore(scoreToAdd);    //Add score to the game manager script whenever an enemy is destroyed.
+            Instantiate(explosionPrefabEnemy, transform.position, transform.rotation);  // Instantiate explosion on enemy object position.
+            Destroy(other.gameObject);              // This will destroy the enemy object.
 
-            //Debug.Log("Bullet Hit Enemy");
+            // Call a coroutine to delay destruction of the projectile to let the sound play
+            StartCoroutine(DestroyAfterSound()); // Adjust the delay to the length of the sound if needed
+
+            gameManager.UpdateScore(scoreToAdd);    // Add score to the game manager script whenever an enemy is destroyed.
         }
-    
-        if (other.gameObject.tag == "Obstacle")
-        {
-            //projectileAudio.PlayOneShot(obstacleSound, 5.0f);       //To be checked.
-            Instantiate(explosionPrefabObstacle, transform.position, transform.rotation);  //Instantiate explosion on enemy object position.
-            Destroy(gameObject);                //This will destroy the player projectile.
-            Destroy(other.gameObject);          //This will destroy the obstacle.
 
-            //Debug.Log("Bullet Hit Obstacle");
+        if (other.gameObject.tag == "Obstacle")
+
+        {
+            if (obstacleSound != null && projectileAudio != null)
+            {
+                projectileAudio.PlayOneShot(obstacleSound, 0.4f); // Play the sound for obstacle collision
+            }
+
+            Instantiate(explosionPrefabObstacle, transform.position, transform.rotation);  // Instantiate explosion on obstacle object position.
+            Destroy(other.gameObject);          // This will destroy the obstacle.
+
+            // Call a coroutine to delay destruction of the projectile
+            StartCoroutine(DestroyAfterSound()); // Adjust the delay to the length of the sound if needed
         }
 
         if (other.gameObject.tag == "Environment")
@@ -58,5 +63,11 @@ public class DetectCollisions : MonoBehaviour
             Destroy(gameObject);                //This will destroy the player projectile when it hits the environment.
             //Debug.Log("Bullet Hit Environment");
         }
+    }
+
+    private IEnumerator DestroyAfterSound()
+    {
+        yield return new WaitForSeconds(0.1f); // Wait for the specified amount of time (enough for the sound to finish)
+        Destroy(gameObject); // Now destroy the projectile after the delay
     }
 }

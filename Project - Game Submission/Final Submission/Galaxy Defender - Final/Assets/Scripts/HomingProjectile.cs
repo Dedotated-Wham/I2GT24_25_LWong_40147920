@@ -35,7 +35,7 @@ public class HomingProjectile : MonoBehaviour
         }
 
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();         //Find Game Manager object and find it's game manager script.
-            projectileAudio = GetComponent<AudioSource>();
+        projectileAudio = GetComponent<AudioSource>();
         
     }
 
@@ -113,12 +113,17 @@ public class HomingProjectile : MonoBehaviour
 
         if (other.gameObject.tag == "Enemy")
         {
+            if (projectileAudio != null && enemySound != null)
+            {
+                projectileAudio.PlayOneShot(enemySound, 0.4f); // Play the sound with a delay if necessary
+            }
+
             // Instantiate explosion on enemy object position
             Instantiate(explosionPrefabEnemy, transform.position, transform.rotation);
 
             // Destroy the enemy and the rocket
             Destroy(other.gameObject);
-            Destroy(gameObject);
+            StartCoroutine(DestroyAfterSound()); // Adjust the delay to the length of the sound if needed
 
             gameManager.UpdateScore(scoreToAdd);    //Add score to the game manager script whenever an enemy is destroyed.
 
@@ -127,12 +132,16 @@ public class HomingProjectile : MonoBehaviour
         }
         else if (other.gameObject.tag == "Obstacle")
         {
+            if (projectileAudio != null && obstacleSound != null)
+            {
+                projectileAudio.PlayOneShot(obstacleSound, 0.4f); // Play the sound with a delay if necessary
+            }
             // Instantiate explosion for obstacles
             Instantiate(explosionPrefabObstacle, transform.position, transform.rotation);
 
             // Destroy the rocket and the obstacle
-            Destroy(gameObject);
             Destroy(other.gameObject);
+            StartCoroutine(DestroyAfterSound()); // Adjust the delay to the length of the sound if needed
 
             // Reset the launch flag in the HomingRocket script
             homingRocketScript.ResetLaunchFlag();
@@ -145,5 +154,10 @@ public class HomingProjectile : MonoBehaviour
             // Reset the launch flag in the HomingRocket script
             homingRocketScript.ResetLaunchFlag();
         }
+    }
+    private IEnumerator DestroyAfterSound()
+    {
+        yield return new WaitForSeconds(0.1f); // Wait for the specified amount of time (enough for the sound to finish)
+        Destroy(gameObject); // Now destroy the projectile after the delay
     }
 }

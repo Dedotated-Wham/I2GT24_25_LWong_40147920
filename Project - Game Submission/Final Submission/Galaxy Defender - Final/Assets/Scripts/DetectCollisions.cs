@@ -36,7 +36,7 @@ public class DetectCollisions : MonoBehaviour
 
             Instantiate(explosionPrefabEnemy, transform.position, transform.rotation);  // Instantiate explosion on enemy object position.
             Destroy(other.gameObject);              // This will destroy the enemy object.
-
+            //Destroy(gameObject);
             // Call a coroutine to delay destruction of the projectile to let the sound play
             StartCoroutine(DestroyAfterSound()); // Adjust the delay to the length of the sound if needed
 
@@ -53,7 +53,7 @@ public class DetectCollisions : MonoBehaviour
 
             Instantiate(explosionPrefabObstacle, transform.position, transform.rotation);  // Instantiate explosion on obstacle object position.
             Destroy(other.gameObject);          // This will destroy the obstacle.
-
+            //Destroy(gameObject);
             // Call a coroutine to delay destruction of the projectile
             StartCoroutine(DestroyAfterSound()); // Adjust the delay to the length of the sound if needed
         }
@@ -64,10 +64,11 @@ public class DetectCollisions : MonoBehaviour
             //Debug.Log("Bullet Hit Environment");
         }
     }
-
+    
     private IEnumerator DestroyAfterSound()
     {
         yield return new WaitForSeconds(0.1f); // Wait for the specified amount of time (enough for the sound to finish)
         Destroy(gameObject); // Now destroy the projectile after the delay
     }
+    
 }

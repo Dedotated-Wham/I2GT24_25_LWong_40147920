@@ -61,7 +61,8 @@ public class PlayerController : MonoBehaviour
 
     [Header("Sound Effects")]
     public AudioClip mainWeaponSound;
-    //public AudioClip altWeaponSound;
+    public AudioClip shieldActivatedSound;
+    public AudioClip increasedFireRateSound;
 
     // Start is called before the first frame update
     void Start()
@@ -89,7 +90,6 @@ public class PlayerController : MonoBehaviour
         //Move plane forward.
         //transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed);
 
-
         //Fire main weapon projectile from player location and direction player is facing.
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)
         {
@@ -97,16 +97,6 @@ public class PlayerController : MonoBehaviour
             nextFire = Time.time + normalFireRate;
             Shoot();
         }
-
-        //Fire alternative weapon projectile from player location and direction player is facing.
-        /*
-        if (Input.GetKeyDown(KeyCode.F) && Time.time > nextAltFire)
-        {
-            //Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation);
-            nextAltFire = Time.time + normalAltFireRate;
-            AltShoot();
-        }
-        */
 
         //Method for main weapon.
         void Shoot()
@@ -116,22 +106,11 @@ public class PlayerController : MonoBehaviour
             playerAudio.PlayOneShot(mainWeaponSound, 0.2f);
 
         }
-
-        //Method for alternative weapon.
-        /*
-        void AltShoot()
-        {
-            Instantiate(altProjectilePrefab, altProjectileSpawnPoint.position, altProjectileSpawnPoint.transform.rotation);
-            playerAudio.PlayOneShot(altWeaponSound, 0.2f);
-        }
-        */
-
         // Move player around field of view camera.
         void LocalMove(float x, float y, float speed)
         {
             transform.localPosition += new Vector3(x, y, 0) * speed * Time.deltaTime;
         }
-
 
         //Prevents the player from moving off screen.       
         void ClampPosition()
@@ -141,8 +120,6 @@ public class PlayerController : MonoBehaviour
             pos.y = Mathf.Clamp01(pos.y);
             transform.position = Camera.main.ViewportToWorldPoint(pos);
         }
-
-
         //To improve the rotation of the plane as the player moves around.
         void RotationLook(float h, float v, float speed)
         {
@@ -205,7 +182,8 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);              //Destroy the power up object.
             hasPowerUpFireRate = true;
             normalFireRate = powerUpFireRate;     //Increase the fire rate by x seconds.
-            
+            playerAudio.PlayOneShot(increasedFireRateSound, 0.3f);
+
             Debug.Log("Player Collected Power Up");
 
             //Start Duration Countdown
@@ -216,12 +194,11 @@ public class PlayerController : MonoBehaviour
         {     
             hasPowerUpShield = true;
             Destroy(other.gameObject);              //Destroy the power up object.
+            playerAudio.PlayOneShot(shieldActivatedSound, 0.5f);
             Debug.Log("Player Collected Power Up Shield");      
         }
-
         // If power up shield = 0 then set to false.
         //Destroy shield. make boolean false.
-
     }
     public IEnumerator FireRateCountdown()
     {
@@ -238,7 +215,5 @@ public class PlayerController : MonoBehaviour
         normalFireRate = 0.6f;                   //Using a float temporarily here but can improve and change to a declared float.
         hasPowerUpFireRate = false;
     }
-
-
 
 }

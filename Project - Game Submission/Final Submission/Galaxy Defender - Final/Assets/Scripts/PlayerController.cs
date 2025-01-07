@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private AudioSource playerAudio;
     private PlayerHealth playerHealth;               //Reference PlayerHealth script.
     private int CrashDamage = 2;
+    
+
 
     //Power Up Fire Rate 
 
@@ -35,7 +37,9 @@ public class PlayerController : MonoBehaviour
     public float xySpeed = 10;
     public float lookSpeed = 50;
     public float forwardSpeed = 10;
-    public float rollSpeed = 10;
+    public float rollSpeed = 200;
+    private float currentRoll = 0f;
+    private float maxRoll = 135f;
 
     [Space]
 
@@ -80,34 +84,11 @@ public class PlayerController : MonoBehaviour
 
         LocalMove(h, v, xySpeed);
         RotationLook(h, v, lookSpeed);
-        //HorizontalLean(playerModel, h, 20, 0.1f);
         ClampPosition();
 
         //Move plane forward.
-        transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed);
+        //transform.Translate(Vector3.forward * Time.deltaTime * forwardSpeed);
 
-        //UpdateCrosshairPosition();
-
-
-        //***Code not working below, to be tested later on.***
-        /*
-        //Roll plane.
-        //Press 'Q' or 'E' to rotate along forward axis.
-
-        if (Input.GetKey(KeyCode.Q))
-        {
-            transform.Rotate(Vector3.forward, Time.deltaTime * rollSpeed);
-            Debug.Log("Pressing Q");
-
-        }
-
-
-        if (Input.GetKey(KeyCode.E))
-        {
-            transform.Rotate(Vector3.forward, Time.deltaTime * -rollSpeed);
-            Debug.Log("Pressing E");
-        }
-        */
 
         //Fire main weapon projectile from player location and direction player is facing.
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > nextFire)

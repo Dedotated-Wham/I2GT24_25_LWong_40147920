@@ -15745,7 +15745,7 @@ MonoBehaviour:
   xySpeed: 10
   lookSpeed: 100
   forwardSpeed: 0
-  rollSpeed: 100
+  rollSpeed: 200
   projectilePrefab: {fileID: 9072614666678335309, guid: 007df7972b1146f40a8ff83d0b10b988, type: 3}
   projectileSpawnPointLeft: {fileID: 1937001796}
   projectileSpawnPointRight: {fileID: 1828711578}

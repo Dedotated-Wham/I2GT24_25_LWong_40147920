@@ -70,7 +70,7 @@ public class DetectCollisions : MonoBehaviour
     
     private IEnumerator DestroyAfterSound()
     {
-        yield return new WaitForSeconds(0.1f); // Wait for the specified amount of time (enough for the sound to finish)
+        yield return new WaitForSeconds(0.5f); // Wait for the specified amount of time (enough for the sound to finish)
         Destroy(gameObject); // Now destroy the projectile after the delay
     }
     

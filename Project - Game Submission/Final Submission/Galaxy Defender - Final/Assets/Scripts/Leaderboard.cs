@@ -40,6 +40,7 @@ public class Leaderboard : MonoBehaviour
         {
             GetLeaderboard();  // Refresh the leaderboard after uploading new entry
         }));
+        LeaderboardCreator.ResetPlayer();
     }
     /*
     public void SetLeaderboardEntry(string username, int score)

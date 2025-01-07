@@ -19,8 +19,6 @@ public class PlayerHealth : MonoBehaviour
     [Header("Player Damaged Ship Prefab")]
     public GameObject damagedShip;
 
-
-
     [Space]
 
     [Header("Sound Manager")]

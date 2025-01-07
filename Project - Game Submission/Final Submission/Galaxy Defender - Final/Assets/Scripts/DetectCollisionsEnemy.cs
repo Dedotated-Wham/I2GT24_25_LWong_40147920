@@ -7,7 +7,7 @@ public class DetectCollisionsEnemy : MonoBehaviour
 {
     private PlayerHealth playerHealth;               //Reference PlayerHealth script.
     private ShieldHealth shieldHealth;          // Reference to the ShieldHealth script.
-    private float damageTaken = 2f;
+    private float damageTaken = 1f;
 
     [Header("Sound Manager")]
     public GameObject soundManager; // Reference to the SoundManager GameObject

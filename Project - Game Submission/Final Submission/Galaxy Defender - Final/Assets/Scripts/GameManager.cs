@@ -9,6 +9,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class GameManager : MonoBehaviour
 {
     private PlayerHealth playerHealth;                      // Reference to PlayerHealth
+    private ShieldHealth shieldHealth;
     private PlayerController playerController;              //Reference PlayerController script.
 
     [Header("Score UI")]
@@ -17,6 +18,12 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI LevelCompleteScoreText;
     public TextMeshProUGUI HealthRemainingBonusText;
     public TextMeshProUGUI LevelCompleteFinalScoreText;
+
+    [Space]
+
+    [Header("Player UI")]
+    public TextMeshProUGUI playerHealthText;
+    public TextMeshProUGUI shieldHealthText;
 
     [Space]
 
@@ -43,6 +50,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerController = FindObjectOfType<PlayerController>();
+        playerHealth = FindObjectOfType<PlayerHealth>();  // Get the PlayerHealth component
+        shieldHealth = FindObjectOfType<ShieldHealth>();
+
         score = 0;                                     //Set score to 0 initially.
         scoreText.text = "Score: " + score;
         gameOverFinalScoreText.text = "Final Score: " + score;
@@ -51,14 +62,18 @@ public class GameManager : MonoBehaviour
         LevelCompleteFinalScoreText.text = "Final Score: " + score;
 
         fireRateCountDownUI.SetActive(false);
-        
-        playerController = FindObjectOfType<PlayerController>();
-        playerHealth = FindObjectOfType<PlayerHealth>();  // Get the PlayerHealth component
+
+        playerHealthText.text = "" + playerHealth.currentHealth;
+        shieldHealthText.text = "" + shieldHealth.currentShieldHealth;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        playerHealthText.text = "" + playerHealth.currentHealth;
+        shieldHealthText.text = "" + shieldHealth.currentShieldHealth;
+
         if (playerController.hasPowerUpFireRate)
         {
             Debug.Log("Player has Increased Fire Rate");

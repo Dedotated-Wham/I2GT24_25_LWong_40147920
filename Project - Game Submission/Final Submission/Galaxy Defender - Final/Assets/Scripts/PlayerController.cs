@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     //Power Up Fire Rate 
 
     public bool hasPowerUpFireRate;
-    public float fireRateTimer = 5.0f;                   //Timer for Fire Rate Powerup.
+    public float fireRateTimer = 7.0f;                   //Timer for Fire Rate Powerup.
     public float normalFireRate = 0.3f;                   //The time delay between main shots.
     //public float normalAltFireRate = 1.0f;               //The time delay between alt shots.
     public float powerUpFireRate = 0.15f;                //The time delay between shots.

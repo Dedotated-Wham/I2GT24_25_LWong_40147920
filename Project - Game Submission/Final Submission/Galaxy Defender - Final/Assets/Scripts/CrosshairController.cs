@@ -40,14 +40,16 @@ public class CrosshairController : MonoBehaviour
         // Convert player's world position to screen position
         Vector3 screenPosition = mainCamera.WorldToScreenPoint(playerTransform.position);
 
-        // Calculate the offset from the center of the screen
-        float offsetX = (screenPosition.x - Screen.width / 2) * movementFactor;
-        float offsetY = (screenPosition.y - Screen.height / 2) * movementFactor;
+        // Get the canvas size in screen space (in pixels)
+        Vector2 canvasSize = rectTransform.root.GetComponent<RectTransform>().sizeDelta;
 
-        /*
-        // Apply the calculated offset to the crosshair
-        rectTransform.anchoredPosition = new Vector2(offsetX, offsetY);
-        */
+        // Normalize the player's screen position relative to the center of the screen
+        float normalizedX = (screenPosition.x - Screen.width / 2) / (Screen.width / 2); // Normalize between -1 and 1
+        float normalizedY = (screenPosition.y - Screen.height / 2) / (Screen.height / 2); // Normalize between -1 and 1
+
+        // Calculate the offset in canvas coordinates based on normalized position
+        float offsetX = normalizedX * (canvasSize.x / 2) * movementFactor;
+        float offsetY = normalizedY * (canvasSize.y / 2) * movementFactor;
 
         // Smooth the movement of the crosshair
         rectTransform.anchoredPosition = Vector2.Lerp(rectTransform.anchoredPosition, new Vector2(offsetX, offsetY), Time.deltaTime * 10f);
